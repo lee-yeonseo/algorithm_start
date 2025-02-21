@@ -1,18 +1,21 @@
-package second.second02;
+package sixth.sixth05;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
-    public int solution(int n, int[] arr) {
-        int answer = 1, max = arr[0];
-        for (int i = 1; i < n; i++) {
-            if (arr[i] > max) {
-                answer++;
-                max = arr[i];
+    public String solution(int n, int[] arr) {
+        String answer = "U";
+        Arrays.sort(arr);
+        for (int i = 0; i < n-1; i++) {
+            if (arr[i] == arr[i+1]) {
+                return "D";
             }
         }
+
         return answer;
     }
-    
+
     public static void main(String[] args) {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
